@@ -1,0 +1,19 @@
+@import '../../styles/includes.scss';
+
+$fieldFontSize: rem(18);
+
+.label {
+  display: block;
+  font-size: rem(18);
+  margin-bottom: rem(6);
+  margin-right: rem(6);
+}
+
+.select {
+  background-color: $colorWhite;
+  background-repeat: no-repeat;
+  border: rem(1) solid $colorBlack;
+  border-radius: rem(4);
+  font-size: $fieldFontSize;
+  flex: 1;
+}

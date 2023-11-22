@@ -1,0 +1,37 @@
+@import '../../../styles/includes.scss';
+
+$fieldFontSize: rem(18);
+$dropdownCaratWidth: rem(14);
+$fieldHeight: rem(52);
+$fieldPaddingHorizontal: rem(16);
+$fieldPaddingVertical: rem(14);
+
+.selectItem {
+  font-size: $fieldFontSize;
+  padding: rem(22) rem(72) rem(22) rem(32);
+  position: relative;
+}
+
+.selectItemCurrent {
+  align-items: center;
+  bottom: 0;
+  display: block;
+  height: $fieldHeight;
+  left: 0;
+  line-height: $fieldHeight;
+  overflow: hidden;
+  padding: 0 $fieldPaddingHorizontal;
+  padding-right: (
+    $dropdownCaratWidth + $fieldPaddingHorizontal * 3
+  );
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  text-overflow: ellipsis;
+  top: 0;
+  white-space: nowrap;
+}
+
+.selectItemSwatch {
+  padding-left: rem(60);
+}
