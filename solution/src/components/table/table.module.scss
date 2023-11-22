@@ -1,0 +1,113 @@
+/* stylelint-disable no-descending-specificity, color-no-hex, property-no-vendor-prefix */
+@import './../../styles/includes.scss';
+
+$cell-width: rem(129);
+$cell-height: rem(78);
+$heading-cell-width: rem(102);
+$heading-cell-height: rem(38);
+
+.tableContainer {
+  @include textBody2;
+
+  background-color: $colorBackgroundGrey;
+  min-height: 0;
+  -ms-overflow-style: auto;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scrollbar-width: rem(2);
+  touch-action: pan-x pan-y;
+
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    height: rem(6);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $colorScrollbarThumb;
+    border-radius: 0;
+  }
+
+  &::-webkit-scrollbar-thumb:horizontal {
+    width: rem(2);
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $colorScrollbarTrack;
+    border-radius: 0;
+  }
+}
+
+.table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-style: hidden;
+  position: relative;
+  width: 100%;
+
+  &Head {
+    height: $heading-cell-height;
+    min-width: $heading-cell-width;
+    width: 100%;
+  }
+
+  &ColHeader {
+    background-color: $colorBackgroundGrey;
+    height: $heading-cell-height;
+    min-width: $heading-cell-width;
+    padding: rem(3);
+    vertical-align: center;
+  }
+
+  &Body {
+    overflow: hidden;
+    position: relative;
+  }
+
+  &Row {
+    &:nth-child(even) {
+      background-color: $colorBackgroundLiteGrey;
+
+      .tableRowHeader {
+        background-color: $colorBackgroundGrey;
+      }
+    }
+
+    &:nth-child(odd) {
+      background-color: $colorBackgroundGrey;
+
+      .tableRowHeader {
+        background-color: $colorBackgroundLiteGrey;
+      }
+    }
+  }
+
+  &RowHeader {
+    background-color: $colorBackgroundLiteGrey;
+    left: 0;
+    min-width: rem(102);
+    position: sticky;
+    top: auto;
+  }
+
+  &Cell {
+    border-left: rem(1) solid $colorWhite;
+    height: $cell-height;
+    touch-action: pan-x pan-y;
+  }
+
+  &Cell,
+  &RowHeader {
+    @include textBody2;
+
+    min-width: $cell-width;
+    padding: rem(2) rem(8);
+    touch-action: pan-x pan-y;
+    width: $cell-width;
+  }
+
+  &ColHeader,
+  &Cell,
+  &RowHeader {
+    white-space: pre;
+  }
+}
