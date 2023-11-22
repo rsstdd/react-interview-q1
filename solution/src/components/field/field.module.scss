@@ -1,0 +1,28 @@
+@import './../../styles/includes.scss';
+
+$fieldFontSize: rem(18);
+
+input {
+  font-size: $fieldFontSize;
+  filter: unset;
+  flex: 1;
+}
+
+input:invalid {
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+input:-moz-autofill,
+input:-moz-autofill-preview {
+  filter: unset;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:active,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover {
+  background-clip: content-box !important;
+  background-color: $colorWhite;
+  -webkit-box-shadow: 0 0 0 rem(60) $colorWhite inset !important;
+}

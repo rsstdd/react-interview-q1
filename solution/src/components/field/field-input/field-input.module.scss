@@ -1,0 +1,35 @@
+@import './../../../styles/includes.scss';
+
+$fieldFontSize: rem(18);
+
+.tagWrapper {
+  position: relative;
+  display: flex;
+  flex: 1;
+}
+
+.input {
+  background-color: $colorWhite;
+  border: rem(1) solid $colorBlack;
+  border-radius: rem(4);
+  display: block;
+  font-size: $fieldFontSize;
+  flex: 1;
+}
+
+.input:focus {
+  box-shadow: 0 0 rem(6) rgba(0, 0, 0, 0.45);
+  outline: none;
+}
+
+.inputError {
+  border-color: $colorError;
+}
+
+.focus {
+  @include focusVisible();
+
+  background: none;
+  border: none;
+  cursor: pointer;
+}
