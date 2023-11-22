@@ -1,0 +1,47 @@
+@import './styles/includes.scss';
+
+.App {
+  text-align: center;
+  width: 100%;
+  margin: rem(50);
+}
+
+.field, .select {
+  width: 100%;
+  padding: rem(20) 0;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+  display: flex;
+  justify-content: space-between;
+}
+
+.field {
+  margin-right: rem(20);
+  display: flex;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+
+
+  @media ($tablet-and-above) {
+    gap: 2rem;
+  }
+}
+
+.button {
+  margin: rem(20);
+  min-width: rem(250);
+  color: $colorBlack;
+}
+
+.tableWrapper {
+  margin-top: rem(50);
+}
+
+.select {
+  margin-right: rem(20);
+  min-width: 100%;
+}
