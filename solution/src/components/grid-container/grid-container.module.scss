@@ -1,0 +1,7 @@
+@import '../../styles/includes.scss';
+
+.gridContainer {
+  margin: auto;
+  padding: rem(30);
+  max-width: $gridMaxOuterWidth;
+}
