@@ -1,0 +1,32 @@
+// media queries @mixin
+@mixin mq($breakpointwidth) {
+  @media only screen and ($breakpointwidth) {
+    @content;
+  }
+}
+
+/* ------------ min-width ------------- */
+
+// 480px +
+// 'mobile' breakpoint
+$small-and-above: 'min-width:' + $xsmall;
+
+// 768px +
+// 'tablet' breakpoint
+$tablet-and-above: 'min-width:' + $small;
+
+// 992px +
+$desktop-and-above: 'min-width:' + $med;
+
+// 1200px +
+$large-and-above: 'min-width:' + $large;
+
+// 1600px +
+// 'xlarge' breakpoint
+$xlarge-and-above: 'min-width:' + $xlarge;
+
+/* ------------ max-width ------------- */
+
+// 0-767px
+// mobile-only
+$mobile: 'max-width:' + ($small - rem(1));

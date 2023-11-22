@@ -1,0 +1,106 @@
+@import './includes.scss';
+
+.text-primary {
+  color: $colorBlack;
+}
+
+.text-secondary {
+  color: $colorWhite;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-strikethrough {
+  color: $colorGray55;
+  text-decoration: line-through;
+}
+
+.text-error {
+  color: $colorError;
+}
+
+.text-warning {
+  color: $colorWarning;
+}
+
+.text-success {
+  color: $colorSuccess;
+}
+
+.text-info {
+  color: $colorInfo;
+}
+
+.link-primary {
+  @include primaryLink;
+}
+
+.link-primary-impact {
+  @include primaryLinkImpact;
+}
+
+.text-xxlarge {
+  @include textXXLarge();
+}
+
+.text-xlarge {
+  @include textXLarge();
+}
+
+.text-large {
+  @include textLarge();
+}
+
+.text-medium {
+  @include textMedium();
+}
+
+.text-small {
+  @include textSmall();
+}
+
+.text-xsmall {
+  @include textXSmall();
+}
+
+.text-body-1 {
+  @include textBody1();
+}
+
+.text-body-2 {
+  @include textBody2();
+}
+
+.text-body-3 {
+  @include textBody3();
+}
+
+.text-button {
+  @include textButton();
+}
+
+.text-subtitle {
+  @include textSubtitle();
+}
+
+.font-weight-regular {
+  font-weight: $fontWeightRegular;
+}
+
+.font-weight-medium {
+  font-weight: $fontWeightMedium;
+}
+
+.font-weight-semibold {
+  font-weight: $fontWeightSemibold;
+}

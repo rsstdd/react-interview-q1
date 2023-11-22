@@ -1,0 +1,21 @@
+@import './functions';
+@import './colors';
+
+// Media query variables - major only
+$xsmall: rem(480);
+$small: rem(768);
+$med: rem(992);
+$large: rem(1200);
+$xlarge: rem(1600);
+
+// Grid gutter widths
+$gridGutterSmall: rem(10);
+$gridGutterMedium: rem(15);
+$gridGutterLarge: rem(25);
+$gridMaxWidth: rem(1322);
+$gridMaxOuterWidth: $gridMaxWidth + ($gridGutterLarge * 2) !default;
+
+$fontWeightLight: 300;
+$fontWeightRegular: 400;
+$fontWeightMedium: 500;
+$fontWeightSemibold: 600;

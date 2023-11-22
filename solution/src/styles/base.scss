@@ -1,0 +1,40 @@
+/* stylelint-disable selector-max-type */
+
+@import './includes.scss';
+@import './_animations.scss';
+
+// stylelint-disable-next-line selector-no-qualifying-type
+html.base {
+  background-color: $colorSnowWhite;
+  color: $colorBlack;
+}
+
+.base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  &,
+  input,
+  textarea,
+  select,
+  button {
+    font-family: 'Calibre', 'Verlag', 'Helvetica', sans-serif;
+  }
+
+  &.js-focus-visible,
+  .js-focus-visible & {
+    :focus:not([data-focus-visible-added]) {
+      outline: none;
+    }
+  }
+}
+
+@import './_grid.scss';
+@import './_text.scss';

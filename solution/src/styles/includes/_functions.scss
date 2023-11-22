@@ -1,0 +1,7 @@
+@function rem($pixelValue) {
+  @return calc($pixelValue / 16) * 1rem;
+}
+
+@function get-space-by-lvl($size) {
+  @return rem(8) * $size;
+}

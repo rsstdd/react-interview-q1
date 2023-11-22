@@ -1,0 +1,45 @@
+@import './includes.scss';
+
+.grid {
+  display: grid;
+  grid-column-gap: $gridGutterSmall;
+  grid-template-columns: repeat(12, 1fr);
+
+  @include mq($tablet-and-above) {
+    grid-column-gap: $gridGutterMedium;
+  }
+
+  @include mq($desktop-and-above) {
+    grid-column-gap: $gridGutterLarge;
+  }
+}
+
+.grid-padding {
+  padding-left: $gridGutterSmall;
+  padding-right: $gridGutterSmall;
+
+  @include mq($tablet-and-above) {
+    padding-left: $gridGutterMedium;
+    padding-right: $gridGutterMedium;
+  }
+
+  @include mq($desktop-and-above) {
+    padding-left: $gridGutterLarge;
+    padding-right: $gridGutterLarge;
+  }
+}
+
+.grid-breakout {
+  margin-left: -1 * $gridGutterSmall;
+  margin-right: -1 * $gridGutterSmall;
+
+  @include mq($tablet-and-above) {
+    margin-left: -1 * $gridGutterMedium;
+    margin-right: -1 * $gridGutterMedium;
+  }
+
+  @include mq($desktop-and-above) {
+    margin-left: -1 * $gridGutterLarge;
+    margin-right: -1 * $gridGutterLarge;
+  }
+}

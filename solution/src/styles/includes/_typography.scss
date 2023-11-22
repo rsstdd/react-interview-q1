@@ -1,0 +1,23 @@
+@import './functions';
+@import './vars';
+
+@mixin textSmall() {
+  font-size: rem(26);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-weight: $fontWeightSemibold;
+  line-height: calc(28/26);
+
+  @media ($desktop-and-above) {
+    font-size: rem(30);
+    line-height: calc(32/30);
+  }
+}
+
+@mixin textBody2() {
+  font-size: rem(17);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-weight: $fontWeightRegular;
+  line-height: calc(20/17);
+}

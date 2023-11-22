@@ -1,0 +1,6 @@
+// Applies focus styles with focus-visible polyfill
+@mixin focusVisible {
+  &[data-focus-visible-added]:focus {
+    @content;
+  }
+}
